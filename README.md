@@ -20,6 +20,8 @@ $ node proxy \
 
 A request to `http://localhost:1234/` will be forwarded to `http://localhost:80/` with the `Host` header set to `dave.dev` and the `Accept` header set to `application/json`.
 
+> Note: The specified headers will be either added or overwritten in the proxied request. If the original request contained the header, it will be overwritten. If it did not, the header will be added.
+
 ### Making HTTPS requests to target
 
 Simply specify a target with `:443` port to make HTTPS requests to the target server.
@@ -33,7 +35,5 @@ $ curl localhost:1234
     <title>Google</title>
     ...
 ```
-
-> Note: The specified headers will be either added or overwritten in the proxied request. If the original request contained the header, it will be overwritten. If it did not, the header will be added.
 
 ![Screenshot](screenshot.png)
