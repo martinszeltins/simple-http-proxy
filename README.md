@@ -9,6 +9,7 @@ $ node proxy \
     --from localhost:4567 --to localhost:80 --authorization "Bearer e1b42860" --x-custom-header MyValue
 
 [info] HTTP proxy listening on "localhost:1234" forwarding to "localhost:80"
+[info] HTTP proxy listening on "localhost:4567" forwarding to "localhost:80"
 [info] Starting 16 workers (cores=16)
 ```
 
