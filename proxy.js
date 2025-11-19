@@ -120,13 +120,8 @@ mappings.forEach(mapping => {
     })
 
     server.listen(mapping.localPort, mapping.localHost, () => {
-        const headersInfo =
-            Object.keys(mapping.headers).length > 0
-                ? ` with header overrides: ${JSON.stringify(mapping.headers)}`
-                : ''
-
         console.log(
-            `HTTP proxy listening on http://${mapping.localHost}:${mapping.localPort} forwarding to ${mapping.targetHost}:${mapping.targetPort}${headersInfo}`
+            `HTTP proxy listening on http://${mapping.localHost}:${mapping.localPort} forwarding to ${mapping.targetHost}:${mapping.targetPort}`
         )
     })
 })

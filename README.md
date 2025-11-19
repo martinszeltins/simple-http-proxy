@@ -3,7 +3,7 @@
 Requires Node >= 22.0
 
 ```bash
-node proxy.mjs \
+node proxy \
     --from localhost:1234 --to localhost:80 --host dave.dev --accept application/json \
     --from localhost:4567 --to localhost:80 --authorization "Bearer e1b42860" --x-custom-header MyValue
 ```
