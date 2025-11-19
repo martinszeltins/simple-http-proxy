@@ -5,8 +5,8 @@ Requires Node ≥ 22.0.
 
 ```bash
 $ node proxy \
-    --from localhost:1234 --to localhost:80 --host dave.dev --accept application/json \
-    --from localhost:4567 --to localhost:80 --authorization "Bearer e1b42860" --x-custom-header MyValue
+  --from localhost:1234 --to localhost:80 --host dave.dev --accept application/json \
+  --from localhost:4567 --to localhost:80 --authorization "Bearer e1b42860" --x-custom-header MyValue
 
 [info] HTTP proxy listening on "localhost:1234" forwarding to "localhost:80"
 [info] HTTP proxy listening on "localhost:4567" forwarding to "localhost:80"
