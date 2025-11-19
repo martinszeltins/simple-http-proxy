@@ -8,6 +8,9 @@ Requires Node ≥ 22.0.
 If you can improve this, make it faster, more reliable - please send in a pull request.
 The goal for this CLI tool is to keep it as simple and easy to use as possible while making it as fast and reliable as possible.
 
+GitHub: https://github.com/martinszeltins/simple-http-proxy
+NPM: https://www.npmjs.com/package/simple-http-reverse-proxy
+
 ```bash
 $ npx simple-http-reverse-proxy \
   --from localhost:1234 --to localhost:80 --host dave.dev --accept application/json \

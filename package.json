@@ -1,6 +1,6 @@
 {
   "name": "simple-http-reverse-proxy",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Simple HTTP reverse proxy with per-port header overrides, clustering and keep-alive.",
   "type": "module",
   "main": "proxy.js",
