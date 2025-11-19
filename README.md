@@ -5,7 +5,7 @@ A lightweight reverse proxy with automatic multi-core workers and keep-alive con
 Requires Node ≥ 22.0.
 
 ### Contributions are welcome!
-If you can improve this, make it faster, more reliable - please send a pull request.
+If you can improve this, make it faster, more reliable - please send in a pull request.
 The goal for this CLI tool is to keep it as simple and easy to use as possible while making it as fast and reliable as possible.
 
 ```bash
