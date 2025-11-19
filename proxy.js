@@ -1,6 +1,7 @@
 #!/usr/bin/env node
 
 import http from 'http'
+import https from 'https'
 import cluster from 'node:cluster'
 import os from 'node:os'
 
@@ -89,12 +90,21 @@ const parseMappings = () => {
             j += 2
         }
 
-        const agent = new http.Agent({
-            keepAlive: true,
-            maxSockets: 1000,
-            maxFreeSockets: 100,
-            timeout: 60000
-        })
+        const isHttps = targetPort === 443
+
+        const agent = isHttps
+            ? new https.Agent({
+                  keepAlive: true,
+                  maxSockets: 1000,
+                  maxFreeSockets: 100,
+                  timeout: 60000
+              })
+            : new http.Agent({
+                  keepAlive: true,
+                  maxSockets: 1000,
+                  maxFreeSockets: 100,
+                  timeout: 60000
+              })
 
         mappings.push({
             localHost,
@@ -102,7 +112,8 @@ const parseMappings = () => {
             targetHost,
             targetPort,
             headers,
-            agent
+            agent,
+            isHttps
         })
 
         i = j - 1
@@ -133,7 +144,9 @@ const startWorkerServers = () => {
                 agent: mapping.agent
             }
 
-            const proxyReq = http.request(options, proxyRes => {
+            const client = mapping.isHttps ? https : http
+
+            const proxyReq = client.request(options, proxyRes => {
                 res.writeHead(proxyRes.statusCode || 500, proxyRes.headers)
                 proxyRes.pipe(res)
             })
