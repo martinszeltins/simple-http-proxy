@@ -36,4 +36,4 @@ $ curl localhost:1234
     ...
 ```
 
-![Screenshot](screenshot.png)
+![Screenshot](https://raw.githubusercontent.com/martinszeltins/simple-http-proxy/refs/heads/master/screenshot.png)
