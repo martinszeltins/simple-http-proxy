@@ -1,6 +1,7 @@
 ## Simple HTTP proxy
 
-Requires Node >= 22.0
+A lightweight reverse proxy with automatic multi-core workers and keep-alive connections for high throughput.
+Requires Node ≥ 22.0.
 
 ```bash
 node proxy \
