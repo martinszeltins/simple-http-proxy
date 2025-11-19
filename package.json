@@ -1,13 +1,22 @@
 {
-  "name": "simple-proxy",
+  "name": "simple-http-reverse-proxy",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "description": "Simple HTTP reverse proxy with per-port header overrides, clustering and keep-alive.",
   "type": "module",
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "main": "proxy.js",
+  "bin": {
+    "simple-http-reverse-proxy": "./proxy.js"
+  },
+  "engines": {
+    "node": ">=22.0.0"
+  },
+  "keywords": [
+    "proxy",
+    "reverse-proxy",
+    "http",
+    "https",
+    "cli"
+  ],
+  "author": "Mārtiņš Zeltiņš",
+  "license": "MIT"
 }

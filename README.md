@@ -9,7 +9,7 @@ If you can improve this, make it faster, more reliable - please send in a pull r
 The goal for this CLI tool is to keep it as simple and easy to use as possible while making it as fast and reliable as possible.
 
 ```bash
-$ node proxy \
+$ npx simple-http-reverse-proxy \
   --from localhost:1234 --to localhost:80 --host dave.dev --accept application/json \
   --from localhost:4567 --to localhost:80 --authorization "Bearer e1b42860" --x-custom-header MyValue
 
@@ -27,7 +27,7 @@ A request to `http://localhost:1234/` will be forwarded to `http://localhost:80/
 Simply specify a target with `:443` port to make HTTPS requests to the target server.
 
 ```bash
-$ node proxy --from localhost:1234 --to google.com:443 --host google.com
+$ npx simple-http-reverse-proxy --from localhost:1234 --to google.com:443 --host google.com
 
 $ curl localhost:1234
 <!doctype html>
