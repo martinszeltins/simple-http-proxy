@@ -1,7 +1,12 @@
 ## Simple HTTP proxy
 
 A lightweight reverse proxy with automatic multi-core workers and keep-alive connections for high throughput.
+
 Requires Node ≥ 22.0.
+
+### Contributions are welcome!
+If you can improve this, make it faster, more reliable - please send a pull request.
+The goal for this CLI tool is to keep it as simple and easy to use as possible while making it as fast and reliable as possible.
 
 ```bash
 $ node proxy \
