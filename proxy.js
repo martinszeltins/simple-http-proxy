@@ -162,7 +162,7 @@ const startWorkerServers = () => {
             })
         })
 
-        server.listen(mapping.localPort, mapping.localHost, () => {
+        server.listen(mapping.localPort, () => {
             // Workers stay silent on success
         })
 
